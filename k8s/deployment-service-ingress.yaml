@@ -1,0 +1,150 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: benefielinthelove
+  namespace: prod
+  labels:
+    env: prod
+    app: benefielinthelove
+spec:
+  selector:
+    matchLabels:
+      app: benefielinthelove
+  replicas: 1
+  template:
+    metadata:
+      name: benefielinthelove
+      labels:
+        app: benefielinthelove
+        name: benefielinthelove
+        env: prod
+    spec:
+      containers:
+        - name: django
+          image: howinator/benefielinthelove:v3
+          imagePullPolicy: Always
+          command: ["python"]
+          args: ["manage.py", "runserver", "0.0.0.0:8000"]
+          envFrom:
+            - secretRef:
+                name: benefielinthelove
+          ports:
+            - containerPort: 8000
+          resources:
+            limits:
+              memory: 100Mi
+              cpu: 200m
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: benefielinthelove-statics
+  namespace: prod
+  labels:
+    env: prod
+    app: benefielinthelove-statics
+spec:
+  selector:
+    matchLabels:
+      app: benefielinthelove-statics
+  replicas: 1
+  template:
+    metadata:
+      name: benefielinthelove-statics
+      labels:
+        app: benefielinthelove-statics
+        name: benefielinthelove-statics
+        env: prod
+    spec:
+      containers:
+        - name: statics
+          image: howinator/benefielinthelove-statics:v4
+          ports:
+            - containerPort: 80
+          resources:
+            limits:
+              memory: 10Mi
+              cpu: 10m
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: benefielinthelove
+  namespace: prod
+  labels:
+    app: benefielinthelove
+    env: prod
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: 8000
+      protocol: TCP
+      name: http
+  selector:
+    app: benefielinthelove
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: benefielinthelove-statics
+  namespace: prod
+  labels:
+    app: benefielinthelove-statics
+    env: prod
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+      name: http
+  selector:
+    app: benefielinthelove-statics
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: benefielinthelove
+  namespace: prod
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    certmanager.k8s.io/cluster-issuer: letsencrypt-prod
+    app: benefielinthelove
+    env: prod
+spec:
+  rules:
+    - host: benefielinthelove.com
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: benefielinthelove
+              servicePort: 80
+          - path: /static
+            backend:
+              serviceName: benefielinthelove-statics
+              servicePort: 80
+  tls:
+    - hosts:
+        - benefielinthelove.com
+      secretName: tls-benefielinthelove.com
+---
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: benefielinthelove
+  namespace: prod
+  annotations:
+    app: benefielinthelove
+    env: prod
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1beta1
+    kind: Deployment
+    name: benefielinthelove
+  minReplicas: 1
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 80
+---
+
