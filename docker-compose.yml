@@ -9,7 +9,7 @@ services:
     env_file:
       - dev.env
     volumes:
-      - .:/code
+      - ./app:/code
     ports:
       - "7665:8000"
     depends_on:
