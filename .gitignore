@@ -8,6 +8,7 @@ static_root/*
 !static_root/nginx.conf
 _working/
 data/
-static/
 guests/static/save-the-date/images/archive/
 k8s/secrets-prod.yml
+
+other-guy/**/static/
