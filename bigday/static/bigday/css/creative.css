@@ -32,6 +32,7 @@ a {
     transition: all .35s;
 }
 
+
 a:hover,
 a:focus {
     color: #eb3812;
@@ -85,6 +86,7 @@ aside {
 
 .navbar-default {
     border-color: rgba(34,34,34,.05);
+    background-color: #e8f1ff;
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
     background-color: #fff;
     -webkit-transition: all .35s;
@@ -131,7 +133,7 @@ aside {
 @media(min-width:768px) {
     .navbar-default {
         border-color: rgba(28,56,81,.3);
-        background-color: transparent;
+        /*background-color: transparent;*/
     }
 
     .navbar-default .navbar-header .navbar-brand {
