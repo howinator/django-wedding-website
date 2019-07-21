@@ -1,8 +1,131 @@
 :root {
-    --primary-bg-color: #e4d6cf;
-    --contrast-color: #235e56;
+    --primary-bg-color: #E2D4CD;
+    --contrast-color: #285e56;
+    --contract-complement: #5E2830;
+    --tertiary-color: #CDDBE2;
+    --white: #FCFBFB;
+    --desktop-width: 980px;
 }
 
 body {
     background-color: var(--primary-bg-color);
+    font-family: 'Lato', sans-serif;
 }
+
+nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 16px;
+}
+
+
+.pg-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.pg-container {
+    width: 100%;
+
+}
+@media only screen and (min-width: 980px) {
+    .pg-container {
+        max-width: var(--desktop-width);
+    }
+}
+
+.rsvp-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-secondary-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+
+.rsvp-btn {
+    width: 140px;
+    height: 44px;
+    background-color: var(--contrast-color);
+    color: var(--white);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 1;
+}
+
+.secondary-nav-btn {
+    min-width: 140px;
+    min-height: 44px;
+
+    color: var(--contrast-color);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.show-tertiary {
+
+    height: 44px;
+    width: 140px;
+    background-color: var(--tertiary-color);
+}
+
+.dog-img-container {
+    background-image: url('dogs.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 60%;
+    display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr 2fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "emily-container . . . ." ". . . . ." ". . . . howie-container";
+}
+.names-header {
+    color: var(--contract-complement);
+    font-size: 3em;
+}
+
+.emily-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: ". . ." "emily-text emily-text emily-text";
+  grid-area: emily-container;
+}
+
+.emily-text { grid-area: emily-text; }
+
+.howie-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "howie-text howie-text howie-text" ". . .";
+  grid-area: howie-container;
+}
+
+.howie-text { grid-area: howie-text; }
+
+
+.dog-img-wrapper {
+    display: flex;
+    justify-content: center;
+    height: 600px;
+}
+
+/*.dog-img-wrapper img {
+    width: 80%;
+}
+*/

@@ -5,14 +5,39 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="{% static 'inforsvp/style.css' %}">
-
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static 'inforsvp/inforsvp.js' %}"></script>
 </head>
 
 <body>
+    <div class="pg-wrapper">
+        <div class="pg-container">
+            <nav>
+                <div class="rsvp-container">
+                    <a href="/rsvp" class="rsvp-btn">RSVP</a>
+                </div>
 
-sup
+                <div class="nav-secondary-container">
+                    <a href="#" id="home-btn" class="secondary-nav-btn">Home</a>
+                    <a href="#" id="story-btn" class="secondary-nav-btn">Our Story</a>
+                    <a href="#" id="wedding-btn" class="secondary-nav-btn">Wedding</a>
+                    <a href="#" id="venue-btn" class="secondary-nav-btn">Venue</a>
+                </div>
+            </nav>
 
-<img src="{% static 'inforsvp/dogs.svg' %}" alt="our dogs">
+        <div class="dog-img-wrapper">
+            <div class="dog-img-container">
+                <div class="emily-container">
+                    <p class="emily-text names-header">Emily</p>
+                </div>
+                <!-- <p class="and-grid names-header">&#38;</p> -->
+                <div class="howie-container">
+                    <p class="howie-text names-header">Howie</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
