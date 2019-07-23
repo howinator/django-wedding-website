@@ -5,7 +5,9 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="{% static 'inforsvp/style.css' %}">
-    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="{% static 'inforsvp/inforsvp.js' %}"></script>
 </head>
@@ -26,16 +28,40 @@
                 </div>
             </nav>
 
-        <div class="dog-img-wrapper">
-            <div class="dog-img-container">
-                <div class="emily-container">
-                    <p class="emily-text names-header">Emily</p>
+            <section class="core-info">
+                <div class="core-info-names">
+                    <p>Emily</p>
+                    <p>Tam</p>
+                    <p>&amp;</p>
+                    <p>Paul</p>
+                    <p>&#x201F;Howie&#x201D;</p>
+                    <p>Benefiel</p>
                 </div>
-                <!-- <p class="and-grid names-header">&#38;</p> -->
-                <div class="howie-container">
-                    <p class="howie-text names-header">Howie</p>
+                <div class="core-info-dogs">
+                    <img src="{% static 'inforsvp/dogs.svg' %}" alt="our dogs, sparky and Milo"/>
                 </div>
-            </div>
+                <div class="core-info-venue">
+                    <p class="script-text">Umlauf Sculpture Garden</p>
+                    <p class="venue-address">605 Azie Morton Rd.</p>
+                    <p class='venue-address'>Austin, Texas</p>
+                </div>
+                <div class="core-info-time">
+                    <p>Ceremony 5:15PM</p>
+                    <p>Drinks - And - Reception</p>
+                    <p>To Follow</p>
+                </div>
+                <div class="core-info-dates">
+                    <div class="core-info-month-and-day">
+                        <p class="core-info-month">Nov</p>
+                        <p class="core-info-day">09</p>
+                    </div>
+                    <p class="core-info-dates-cta">Come eat, drink and dance your pants off</p>
+                    <div class="core-info-year">
+                        <p class="core-info-year">2019</p>
+                    </div>
+                </div>
+            </section>
+
         </div>
     </div>
 </body>
