@@ -170,11 +170,16 @@ nav {
 }
 
 .core-info-venue .script-text {
-    font-size: 1.2em;
     margin-bottom: 0;
 }
-@media only screen and (min-width: 980px) {
-    .core-info-venue .script-text {
+
+.script-text {
+    font-family: 'Mrs Saint Delafield', cursive;
+    font-size: 1.2em;
+}
+
+@media only screen and (min-width: 1000px) {
+    .script-text {
         font-size: 1.6em;
     }
 }
@@ -239,10 +244,6 @@ nav {
     font-size: 1.4em;
 }
 
-.script-text {
-    font-family: 'Mrs Saint Delafield', cursive;
-}
-
 .core-info-dogs { grid-area: core-info-dogs; }
 
 .core-info-venue { grid-area: core-info-venue; }
@@ -295,7 +296,7 @@ nav {
     width: 100%;
 
     background-attachment: fixed;
-    background-position: top;
+    background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
 }
