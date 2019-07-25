@@ -64,7 +64,7 @@ nav {
 
 @media only screen and (min-width: 1200px) {
     .spacer {
-        height: 15vh;
+        height: 17vh;
     }
 }
 
@@ -204,6 +204,12 @@ nav {
     background: linear-gradient(var(--contrast-color), var(--contrast-color)) top/ 90% 2px no-repeat;
 }
 
+@media only screen and (min-width: 1200px) {
+    .core-info-dates {
+        height: 40%;
+    }
+}
+
 .core-info-month-and-day {
     display: flex;
     flex-direction: column;
@@ -249,6 +255,11 @@ nav {
 .our-story {
     background: var(--white);
     width: 100%;
+}
+
+.our-story-icon {
+    margin-top: 64px;
+    margin-bottom: 16px;
 }
 
 .our-story-title {
