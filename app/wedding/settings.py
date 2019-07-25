@@ -72,6 +72,12 @@ TEMPLATES = [
     },
 ]
 
+STATIC_ROOT = 'static_root'
+STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.join('inforsvp', 'static'),
+)
+
 WSGI_APPLICATION = 'wedding.wsgi.application'
 
 

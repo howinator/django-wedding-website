@@ -8,11 +8,11 @@ build_statics:
 	docker-compose run web python manage.py collectstatic --noinput
 
 build_statics_docker:
-	docker build -f Dockerfile.statics -t howinator/benefielinthelove-statics:$(version) ./static_root
+	docker build -f Dockerfile.statics -t howinator/benefielinthelove-statics:$(version) ./app/static_root
 
 build_docker:
-	docker build -t howinator/benefielinthelove:$(version) .
+	docker build -f Dockerfile -t howinator/benefielinthelove:$(version) .
 
 push:
-	docker push howinator/benefielinthelove:$(version) 
+	docker push howinator/benefielinthelove:$(version)
 	docker push howinator/benefielinthelove-statics:$(version)

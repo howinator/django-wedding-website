@@ -4,24 +4,35 @@
     --contract-complement: #5E2830;
     --tertiary-color: #CDDBE2;
     --white: #FCFBFB;
-    --desktop-width: 980px;
+    --desktop-width: 80%;
 }
 
 body {
     background-color: var(--primary-bg-color);
-    /*font-family: 'Lato', sans-serif;*/
     font-family: 'Raleway', sans-serif;
     font-weight: 200;
+    margin: 0;
 }
 
 nav {
     width: 100%;
+    font-weight: 600;
+    position: fixed;
+    top: 0;
+    background-color: var(--primary-bg-color);
+}
+
+.nav-container {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-top: 16px;
-    font-weight: 600;
-    margin-bottom: 16px
+    height: 78px;
+}
+
+.complete-center-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -29,15 +40,17 @@ nav {
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 
-.pg-container {
+.max-width-container {
     width: 100%;
 
 }
 @media only screen and (min-width: 980px) {
-    .pg-container {
+    .max-width-container {
         max-width: var(--desktop-width);
     }
 }
@@ -46,6 +59,7 @@ nav {
     flex-grow: 1;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .nav-secondary-container {
@@ -55,6 +69,9 @@ nav {
     justify-content: center;
 }
 
+.all-viewport {
+    height: 100vh;
+}
 
 
 .rsvp-btn {
@@ -86,6 +103,7 @@ nav {
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: "core-info-names core-info-dogs core-info-venue" "core-info-names core-info-dogs core-info-time" "core-info-dates core-info-dates core-info-dates";
     color: var(--contrast-color);
+    width: 100%;
 }
 
 .core-info-dogs {
@@ -187,3 +205,51 @@ nav {
 
 .core-info-dates { grid-area: core-info-dates; }
 
+
+.our-story {
+    background: var(--white);
+    width: 100%;
+}
+
+.our-story-title {
+    color: var(--contrast-color);
+    margin: 48px 0 48px 0;
+    font-size: 2em;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+}
+
+.center-column-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.our-story-text {
+    text-align: center;
+    color: var(--contrast-color);
+    max-width: 80%;
+    line-height: 2.2;
+    font-size: 1.4em;
+}
+
+.extra-margin-bottom {
+    margin-bottom: 64px;
+}
+
+.parallax {
+    background-image: url('couple-photo-dogs.jpg');
+    min-height: 900px;
+    width: 100%;
+
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.the-wedding {
+    min-height: 800px;
+}

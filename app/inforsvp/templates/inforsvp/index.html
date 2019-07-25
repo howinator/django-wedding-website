@@ -4,6 +4,7 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="{% static 'inforsvp/style.css' %}">
     <!-- <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,600&display=swap" rel="stylesheet">
@@ -14,19 +15,22 @@
 
 <body>
     <div class="pg-wrapper">
-        <div class="pg-container">
             <nav>
-                <div class="rsvp-container">
-                    <a href="/rsvp" class="rsvp-btn">RSVP</a>
-                </div>
+                <div class="nav-container max-width-container">
+                    <div class="rsvp-container">
+                        <a href="/rsvp" class="rsvp-btn">RSVP</a>
+                    </div>
 
-                <div class="nav-secondary-container">
-                    <a href="#" id="home-btn" class="secondary-nav-btn">Home</a>
-                    <a href="#" id="story-btn" class="secondary-nav-btn">Our Story</a>
-                    <a href="#" id="wedding-btn" class="secondary-nav-btn">Wedding</a>
-                    <a href="#" id="venue-btn" class="secondary-nav-btn">Venue</a>
+                    <div class="nav-secondary-container">
+                        <a href="#" id="home-btn" class="secondary-nav-btn">Home</a>
+                        <a href="#" id="story-btn" class="secondary-nav-btn">Our Story</a>
+                        <a href="#" id="wedding-btn" class="secondary-nav-btn">Wedding</a>
+                        <a href="#" id="venue-btn" class="secondary-nav-btn">Venue</a>
+                    </div>
                 </div>
             </nav>
+
+        <div class="max-width-container all-viewport complete-center-column">
 
             <section class="core-info">
                 <div class="core-info-names">
@@ -61,8 +65,41 @@
                     </div>
                 </div>
             </section>
-
         </div>
+
+
+        <section id="our-story" class="our-story center-column-flex">
+            <div class="max-width-container center-column-flex">
+                <div class="our-story-icon"></div>
+                <h1 class="our-story-title">OUR STORY</h1>
+                <p class="our-story-text">
+                    Hi! Look no further! You found the website you were looking for.
+                    Emily and Howie are super excited to see you at our wedding (unless you&apos;re a robot 🤖).
+                </p>
+                <p class="our-story-text extra-margin-bottom">
+                    Depending on who you ask, you&apos;ll get a different answer about how we met.
+                    However, we all agree that Emily and Howie originally met at a party Howie threw in 2014.
+                    Since then, it&apos;s been nothing but love, outdoors and dogs.
+                </p>
+            </div>
+        </section>
+
+        <div class="parallax"></div>
+
+        <section id="the-wedding" class="the-wedding center-column-flex">
+            <div class="max-width-container center-column-flex">
+                <div class="the-weddng-icon"></div>
+                <h1 class="the-wedding-title center-column-flex">THE WEDDING</h1>
+                <p class="the-wedding-stuff">
+                    Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+                </p>
+                <p class="the-wedding-stuff">
+                    Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+                    Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+                </p>
+            </div>
+        </section>
+
     </div>
 </body>
 

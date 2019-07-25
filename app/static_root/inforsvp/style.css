@@ -1,0 +1,189 @@
+:root {
+    --primary-bg-color: #E2D4CD;
+    --contrast-color: #285e56;
+    --contract-complement: #5E2830;
+    --tertiary-color: #CDDBE2;
+    --white: #FCFBFB;
+    --desktop-width: 980px;
+}
+
+body {
+    background-color: var(--primary-bg-color);
+    /*font-family: 'Lato', sans-serif;*/
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 16px;
+    font-weight: 600;
+    margin-bottom: 16px
+}
+
+
+.pg-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.pg-container {
+    width: 100%;
+
+}
+@media only screen and (min-width: 980px) {
+    .pg-container {
+        max-width: var(--desktop-width);
+    }
+}
+
+.rsvp-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-secondary-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+
+.rsvp-btn {
+    width: 140px;
+    height: 44px;
+    background-color: var(--contrast-color);
+    color: var(--white);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 1;
+}
+
+.secondary-nav-btn {
+    min-width: 140px;
+    min-height: 44px;
+
+    color: var(--contrast-color);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.core-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "core-info-names core-info-dogs core-info-venue" "core-info-names core-info-dogs core-info-time" "core-info-dates core-info-dates core-info-dates";
+    color: var(--contrast-color);
+}
+
+.core-info-dogs {
+    /* https://stackoverflow.com/a/48103289 */
+    background: linear-gradient(var(--contrast-color), var(--contrast-color)) right / 2px 80% no-repeat;
+}
+
+.core-info-names {
+    grid-area: core-info-names;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 32px;
+    position: relative;
+    background: linear-gradient(var(--contrast-color), var(--contrast-color)) right / 2px 80%;
+    background-repeat:no-repeat;
+}
+
+.core-info-venue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.4em;
+
+    background:
+     linear-gradient(var(--contrast-color), var(--contrast-color)) bottom/ 40% 2px no-repeat;
+}
+
+.core-info-venue .script-text {
+    font-size: 1.6em;
+    margin-bottom: 0;
+}
+
+.venue-address {
+    margin: 4px 0 4px 0;
+}
+
+.core-info-time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.2em;
+}
+
+.core-info-time p {
+    margin: 4px 0 4px 0;
+}
+
+.core-info-dates {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    height: 60%;
+    background: linear-gradient(var(--contrast-color), var(--contrast-color)) top/ 90% 2px no-repeat;
+}
+
+.core-info-month-and-day {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.core-info-month {
+    font-size: 1.3em;
+    margin-bottom: 2px;
+}
+
+.core-info-day {
+    font-size: 1.8em;
+    margin-top: 0;
+}
+
+.core-info-year {
+    font-size: 1.4em;
+}
+
+.core-info-names p {
+    margin: 4px 0 4px 0;
+    font-size: 2.2em;
+}
+
+.core-info-dates-cta {
+    font-size: 1.4em;
+}
+
+.script-text {
+    font-family: 'Mrs Saint Delafield', cursive;
+}
+
+.core-info-dogs { grid-area: core-info-dogs; }
+
+.core-info-venue { grid-area: core-info-venue; }
+
+.core-info-time { grid-area: core-info-time; }
+
+.core-info-dates { grid-area: core-info-dates; }
+
