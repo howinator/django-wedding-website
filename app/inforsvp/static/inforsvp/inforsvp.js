@@ -6,6 +6,14 @@ window.setTimeout(() => {
     }
 }, 5000);
 
-$(() => {
-    // do everything here
+const redirectThanks = function() {
+    if (window.location.pathname === '/thanks' || window.location.pathname === '/thanks/') {
+        setTimeout(function(){
+            window.location.href = 'https://benefielinthelove.com';
+        }, 3000)
+    }
+}
+
+$(document).ready(() => {
+    redirectThanks();
 });

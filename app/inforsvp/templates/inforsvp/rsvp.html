@@ -1,0 +1,78 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>RSVP to Emily and Howie's Wedding</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'inforsvp/style.css' %}">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static 'inforsvp/inforsvp.js' %}"></script>
+</head>
+
+<body>
+    <div class="pg-wrapper">
+            <nav>
+                <div class="nav-container max-width-container">
+                    <div class="rsvp-container">
+                        <a href="/rsvp" class="rsvp-btn">RSVP</a>
+                    </div>
+
+                    <div class="nav-secondary-container">
+                        <a href="#" id="home-btn" class="secondary-nav-btn">Home</a>
+                        <a href="#" id="story-btn" class="secondary-nav-btn">Our Story</a>
+                        <a href="#" id="wedding-btn" class="secondary-nav-btn">Wedding</a>
+                        <a href="#" id="getting-there-btn" class="secondary-nav-btn">Getting There</a>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="rsvp-form-container pad-for-nav">
+                <div class="rsvp-form-wrapper">
+                    <h2>Yes, I&apos;ll be there.</h2>
+                    <form action="/rsvp/" method="post">
+                        {% csrf_token %}
+                        <div class="form-group-wrapper">
+                            <div class="field-wrapper">
+                                {{ form.your_name.errors }}
+                                <div class="form-field-label">
+                                    <span>*</span>
+                                    <label for="{{ form.your_name.id_for_label }}">Name</label>
+                                </div>
+                                {{ form.your_name }}
+                            </div>
+                            <div class="field-wrapper">
+                                {{ form.number_attending.errors }}
+                                <div class="form-field-label">
+                                    <span>*</span>
+                                    <label for="{{ form.number_attending.id_for_label }}">Number Attending</label>
+                                </div>
+                                {{ form.number_attending }}
+                            </div>
+                        </div>
+                        <div class="field-wrapper">
+                            {{ form.email.errors }}
+                            <div class="form-field-label">
+                                <span>*</span>
+                                <label for="{{ form.email.id_for_label }}">Email</label>
+                            </div>
+                            {{ form.email }}
+                        </div>
+                        <div class="field-wrapper">
+                            {{ form.extra_info.errors }}
+                            <div class="form-field-label">
+                                <label for="{{ form.extra_info.id_for_label }}">Anything we should know?</label>
+                            </div>
+                            {{ form.extra_info }}
+                        </div>
+                        <input class="submit-btn" type="submit" value="SUBMIT">
+                    </form>
+                </div>
+            </div>
+        </div>
+</body>

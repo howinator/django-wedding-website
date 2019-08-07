@@ -10,7 +10,8 @@
     <!-- <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script type="text/javascript" src="{% static 'inforsvp/inforsvp.js' %}"></script>
 </head>
 
@@ -26,14 +27,14 @@
                         <a href="#" id="home-btn" class="secondary-nav-btn">Home</a>
                         <a href="#" id="story-btn" class="secondary-nav-btn">Our Story</a>
                         <a href="#" id="wedding-btn" class="secondary-nav-btn">Wedding</a>
-                        <a href="#" id="venue-btn" class="secondary-nav-btn">Venue</a>
+                        <a href="#" id="getting-there-btn" class="secondary-nav-btn">Getting There</a>
                     </div>
                 </div>
             </nav>
 
-            <div class="spacer"></div>
+            <!-- <div class="spacer"></div> -->
 
-        <div class="max-width-container all-viewport complete-center-column">
+        <div class="pad-for-nav max-width-container complete-center-column">
 
             <section class="core-info">
                 <div class="core-info-names">
@@ -45,7 +46,7 @@
                     <p>Benefiel</p>
                 </div>
                 <div class="core-info-dogs">
-                    <img src="{% static 'inforsvp/dogs.svg' %}" alt="our dogs, sparky and Milo"/>
+                    <img class="dogs-img" src="{% static 'inforsvp/dogs.svg' %}" alt="our dogs, sparky and Milo"/>
                 </div>
                 <div class="core-info-venue">
                     <p class="script-text">Umlauf Sculpture Garden</p>
@@ -73,10 +74,10 @@
 
         <section id="our-story" class="our-story center-column-flex">
             <div class="max-width-container center-column-flex">
-                <div class="our-story-icon">
-                    <img src="{% static 'inforsvp/flower-pink.png' %}" alt="Pink Flower"/>
+                <div class="section-icon">
+                    <img src="{% static 'inforsvp/book.png' %}" alt="book"/>
                 </div>
-                <h1 class="our-story-title">OUR STORY</h1>
+                <h1 class="section-title">OUR STORY</h1>
                 <p class="our-story-text">
                     Hi! Look no further! You found the website you were looking for.
                     Emily and Howie are super excited to see you at our wedding (unless you&apos;re a robot 🤖).
@@ -88,19 +89,58 @@
                 </p>
             </div>
         </section>
+            <img class="full-width-img" src="{% static 'inforsvp/couple-photo-dogs_1707x1707.jpg' %}"/>
 
-        <div class="parallax"></div>
 
-        <section id="the-wedding" class="the-wedding center-column-flex">
+            <!-- <picture class="parallax-block"> -->
+            <!-- </picture> -->
+
+            <!-- <div class="parallax"></div> -->
+
+            <!-- <h2 class="parallax-floater">Sup</h2> -->
+
+            <section id="the-wedding" class="the-wedding center-column-flex">
+                <div class="max-width-container center-column-flex">
+                    <div class="section-icon">
+                        <img src="{% static 'inforsvp/wedding-rings.png' %}" alt="Book pages"/>
+                    </div>
+                    <h1 class="section-title center-column-flex">THE WEDDING</h1>
+                    <div class="the-wedding-content">
+                        <div class="center-column-flex">
+                            <h2>When</h2>
+                            <p>Nov 9, 2019 5:15 PM</p>
+                        </div>
+                        <div class="right-half-line"></div>
+                        <div class="center-column-flex">
+                            <h2>Where</h2>
+                            <p class="narrow-bottom-margin">605 Azie Morton Rd</p>
+                            <p>Austin, TX 78704</p>
+                        </div>
+                    </div>
+                    <div class="rsvp-container">
+                        <a href="/rsvp" class="rsvp-btn">RSVP</a>
+                    </div>
+                </div>
+            </section>
+
+
+        <section id="getting-there" class="getting-there center-column-flex">
             <div class="max-width-container center-column-flex">
-                <div class="the-weddng-icon"></div>
-                <h1 class="the-wedding-title center-column-flex">THE WEDDING</h1>
-                <p class="the-wedding-stuff">
-                    Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+                <div class="section-icon">
+                    <img src="{% static 'inforsvp/leaves.png' %}"/>
+                </div>
+                <h1 class="section-title center-column-flex">GETTING THERE</h1>
+                <h2>Transportation</h2>
+                <p>
+                    Umlauf Sculpture Gardens is near downtown Austin, so it's accessible via Lyft and Uber.
+                    If you&apos;re feeling extra adventurous, try an elctric scooter or bike.
+                    Emily and I prefer Jump bikes and lyft scooters.
                 </p>
-                <p class="the-wedding-stuff">
-                    Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-                    Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+                <h2>
+                    Accommodations
+                </h2>
+                <p>
+                    Check back later for some hotel options.
                 </p>
             </div>
         </section>
