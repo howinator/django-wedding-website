@@ -412,3 +412,15 @@ form {
     color: var(--contrast-color);
 }
 
+footer {
+    margin-top: 24px;
+    padding: 24px 0 24px 0;
+    color: var(--contrast-color);
+    background-color: var(--white);
+    width: 100%;
+}
+
+footer a {
+    color: var(--contrast-color);
+}
+
