@@ -10,7 +10,7 @@ var redirectThanks = function() {
     if (window.location.pathname === '/thanks' || window.location.pathname === '/thanks/') {
         setTimeout(function(){
             window.location.href = 'https://benefielinthelove.com';
-        }, 3000)
+        }, 6000)
     }
 }
 
