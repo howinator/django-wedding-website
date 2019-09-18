@@ -11,8 +11,6 @@ def index(request):
 
     context = {}
 
-    raise Exception('lol')
-
     return render(request,'inforsvp/index.html', context)
 
 
