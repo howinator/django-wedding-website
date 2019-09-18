@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: django
-          image: howinator/benefielinthelove:v13
+          image: howinator/benefielinthelove:v14
           imagePullPolicy: Always
           command: ["python"]
           args: ["manage.py", "runserver", "0.0.0.0:8000"]
@@ -58,7 +58,7 @@ spec:
     spec:
       containers:
         - name: statics
-          image: howinator/benefielinthelove-statics:v13
+          image: howinator/benefielinthelove-statics:v14
           ports:
             - containerPort: 80
           resources:
