@@ -6,5 +6,5 @@ from .models import RSVP
 
 @admin.register(RSVP)
 class RSVPAdmin(admin.ModelAdmin):
-    fields = ('name', 'email', 'number_attending', 'extra_info', 'created_at')
+    fields = ('name', 'email', 'number_attending', 'extra_info')
     list_display = fields
