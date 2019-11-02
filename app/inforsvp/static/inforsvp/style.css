@@ -198,6 +198,10 @@ nav {
     }
 }
 
+.sm-text {
+    font-size: .2em;
+}
+
 .venue-address {
     margin: 4px 0 4px 0;
 }
