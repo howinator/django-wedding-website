@@ -10,6 +10,5 @@ _working/
 data/
 guests/static/save-the-date/images/archive/
 k8s/secrets-prod.yml
-dev.env
 
 other-guy/**/static/
